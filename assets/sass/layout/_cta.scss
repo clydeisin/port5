@@ -1,0 +1,124 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme CTA CSS
+----------------------------------------*/
+.tj-cta-section {
+	background-color: var(--tj-color-common-black-2);
+	padding-top: 120px;
+
+	@media #{$md} {
+		padding-top: 100px;
+	}
+	@media #{$sm, $xs} {
+		padding-top: 80px;
+	}
+}
+
+.tj-cta-section {
+	&.style-2 {
+		padding-bottom: 0px;
+		background-color: var(--tj-color-common-black-2);
+	}
+}
+
+.cta-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	.tj-theme-btn {
+		background-image: none;
+		background-color: var(--tj-color-theme-accent-1);
+	}
+	.tj-theme-border {
+		color: var(--tj-color-common-white);
+		border-color: var(--tj-color-common-white);
+	}
+	@media #{$xs} {
+		flex-direction: column;
+	}
+}
+
+.cta-wrapper {
+	&.style-8 {
+		border-radius: 25px;
+		padding: 70px 25px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		position: relative;
+		z-index: 1;
+		.cta-content {
+			max-width: 910px;
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			.subtitle {
+				display: block;
+				font-size: 14px;
+				color: var(--tj-color-common-white);
+				font-weight: var(--tj-fw-sbold);
+				letter-spacing: 0.02em;
+				text-transform: uppercase;
+				margin-bottom: 20px;
+			}
+			.title {
+				font-size: 62px;
+				color: var(--tj-color-common-white);
+				font-weight: var(--tj-fw-sbold);
+				letter-spacing: -0.02em;
+				margin-bottom: 35px;
+			}
+		}
+		@media #{$xl} {
+			.cta-content {
+				.title {
+					font-size: 55px;
+				}
+			}
+		}
+		@media #{$lg} {
+			.cta-content {
+				.title {
+					font-size: 50px;
+				}
+			}
+		}
+		@media #{$md} {
+			padding: 40px 15px;
+			.cta-content {
+				.title {
+					font-size: 45px;
+					margin-bottom: 25px;
+				}
+			}
+		}
+		@media #{$sm} {
+			padding: 35px 15px;
+			.cta-content {
+				.subtitle {
+					margin-bottom: 15px;
+				}
+				.title {
+					font-size: 35px;
+					margin-bottom: 25px;
+				}
+			}
+		}
+		@media #{$xs} {
+			padding: 35px 15px;
+			.cta-content {
+				.subtitle {
+					font-size: 12px;
+					margin-bottom: 12px;
+				}
+				.title {
+					font-size: 23px;
+					margin-bottom: 25px;
+				}
+			}
+		}
+	}
+}
+/* !END: Theme CTA CSS */

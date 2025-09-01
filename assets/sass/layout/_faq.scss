@@ -1,0 +1,103 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: FAQ CSS
+----------------------------------------*/
+.faq-section {
+	padding-top: 120px;
+
+	@media #{$md} {
+		padding-top: 100px;
+	}
+	@media #{$sm, $xs} {
+		padding-top: 80px;
+	}
+	.accordion {
+		max-width: 800px;
+		width: 100%;
+		margin: 0 auto;
+
+		.accordion-item {
+			position: relative;
+			z-index: 2;
+			box-shadow: none;
+			margin-bottom: 25px;
+			background-color: rgb(20, 12, 28);
+			border: 1px solid rgba(129, 76, 236, 0.22);
+			border-radius: 15px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			.faq-title {
+				font-size: 20px;
+				line-height: 1.3;
+				font-weight: var(--tj-fw-medium);
+				padding: 20px 55px 20px 30px;
+				background-color: transparent;
+				position: relative;
+				color: var(--tj-color-common-white);
+				width: 100%;
+				text-align: left;
+				border: none;
+				letter-spacing: -0.02em;
+
+				&:before {
+					position: absolute;
+					top: 20px;
+					right: 24px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					content: "\f055";
+					font-family: "Font Awesome 6 Pro";
+					font-size: 26px;
+					color: var(--tj-color-theme-primary);
+					font-weight: 300;
+					line-height: 1;
+					transition: all 0.3s ease-in-out 0s;
+				}
+
+				&:not(.collapsed) {
+					&::before {
+						content: "\f056";
+					}
+				}
+			}
+			.faq-text {
+				padding: 5px 30px 30px 30px;
+				max-width: 985px;
+				width: 100%;
+				color: rgba(255, 255, 255, 0.6);
+				font-size: 16px;
+				ul {
+					padding-left: 20px;
+				}
+				p {
+					color: inherit;
+					&:last-child {
+						margin-bottom: 0;
+					}
+
+					a {
+						color: var(--tj-color-theme-primary);
+					}
+				}
+			}
+			@media #{$xs} {
+				.faq-title {
+					font-size: 18px;
+					padding: 17px 45px 17px 20px;
+					&::before {
+						right: 17px;
+					}
+				}
+				.faq-text {
+					padding: 5px 20px 20px 20px;
+				}
+			}
+		}
+	}
+}
+/* !END: FAQ CSS */

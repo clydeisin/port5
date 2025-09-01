@@ -1,0 +1,28 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Footer CSS
+----------------------------------------*/
+.tj-footer-area {
+	padding: 45px 0;
+	background-color: var(--tj-color-common-black-2);
+	@media #{$md, $sm, $xs} {
+		padding: 25px 0;
+	}
+}
+
+.copy-text {
+	color: rgba(255, 255, 255, 0.6);
+	p {
+		font-size: 14px;
+		text-transform: uppercase;
+		margin-bottom: 0;
+		a {
+			color: var(--tj-color-common-white);
+			&:hover {
+				color: var(--tj-color-theme-primary);
+			}
+		}
+	}
+}
+/* !END: Theme Footer CSS */

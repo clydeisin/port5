@@ -1,0 +1,162 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Fature CSS
+----------------------------------------*/
+
+.tj-feature {
+	&-area {
+		background: var(--tj-color-common-black-2);
+		padding-top: 120px;
+		padding-bottom: 90px;
+		& .tj-service-title {
+			font-size: 20px;
+		}
+		& .tj-service-desc {
+			color: rgba(255, 255, 255, 0.6);
+		}
+		@media #{$md} {
+			padding-top: 100px;
+			padding-bottom: 70px;
+		}
+		@media #{$sm, $xs} {
+			padding-top: 80px;
+			padding-bottom: 50px;
+		}
+	}
+	&-wrapper {
+		padding: 50px 25px 40px;
+		@media #{$xl, $lg, $md, $sm, $xs} {
+			padding: 30px 15px;
+			.tj-service-title {
+				margin-bottom: 20px;
+			}
+		}
+	}
+	&-icon {
+		margin-bottom: 40px;
+		span {
+			display: inline-block;
+			max-width: 50px;
+			width: 100%;
+			img {
+				width: 100%;
+			}
+		}
+		@media #{$xl, $lg, $md, $sm, $xs} {
+			margin-bottom: 25px;
+		}
+	}
+}
+
+// featured
+.featured {
+	&-cta {
+		padding-top: 120px;
+
+		@media #{$md} {
+			padding-top: 100px;
+		}
+		@media #{$sm, $xs} {
+			padding-top: 80px;
+		}
+
+		&.style-2 {
+			padding-top: 0;
+
+			.featured_cta_inner {
+				background-image: linear-gradient(
+					301.21deg,
+					#8750f7 30.87%,
+					#cb0891 98.97%
+				);
+				flex-direction: row-reverse;
+			}
+		}
+	}
+	&_cta_inner {
+		border-radius: 24px;
+		background-image: linear-gradient(130deg, #8750f7 30.87%, #cb0891 98.97%);
+		padding: 30px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: 30px;
+		row-gap: 50px;
+
+		.thumb {
+			max-width: 560px;
+			width: 100%;
+		}
+		.content {
+			max-width: 500px;
+			width: 100%;
+
+			.tj-section-wrapper {
+				margin: 0;
+				.tj-section-subtitle,
+				.tj-section-title {
+					color: var(--tj-color-common-white);
+				}
+				.desc {
+					color: var(--tj-color-common-white);
+					margin-top: 30px;
+
+					ul {
+						padding-left: 20px;
+						li {
+							font-weight: var(--tj-fw-medium);
+							line-height: 1.5;
+						}
+					}
+				}
+			}
+		}
+
+		@media #{$xl} {
+			.thumb {
+				max-width: 520px;
+			}
+		}
+		@media #{$lg} {
+			padding: 30px 20px;
+			.thumb {
+				max-width: 415px;
+			}
+			.content {
+				max-width: 450px;
+			}
+		}
+		@media #{$md} {
+			justify-content: center;
+			flex-direction: column;
+
+			.thumb {
+				max-width: 550px;
+			}
+			.content {
+				max-width: 550px;
+			}
+		}
+		@media #{$sm, $xs} {
+			justify-content: center;
+			flex-direction: column;
+			padding: 25px 15px;
+
+			.thumb {
+				max-width: 550px;
+			}
+			.content {
+				max-width: 550px;
+
+				.tj-section-wrapper {
+					.desc {
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+/* !END: Theme Fature CSS */

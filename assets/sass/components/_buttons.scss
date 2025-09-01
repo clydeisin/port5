@@ -1,0 +1,81 @@
+@use "../utilities" as *;
+
+
+.tj-theme {
+  &-btn {
+    background-image: linear-gradient(to right, #8750f7 0%, #2a1454 51%, #8750f7 100%);
+    color: var(--tj-color-common-white);
+    padding: 14px 30px;
+    display: inline-flex;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 50px;
+    transition: 0.4s;
+    background-size: 200%;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      background-position: -100%;
+    }
+  }
+}
+
+.tj-theme {
+  &-border {
+    background: transparent;
+    color: var(--tj-color-theme-primary);
+    border: 1px solid var(--tj-color-theme-primary);
+    padding: 14px 30px;
+    display: inline-flex;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 50px;
+    transition: 0.4s;
+    background-size: 200%;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      background-position: -100%;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.icon_box {
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+  rotate: -45deg;
+  transform: translateY(3px);
+  .icon_first,
+  .icon_second {
+      color: var(--tj-color-common-white);
+      font-size: 16px;
+      transition: all 0.3s ease-in-out 0s;
+      line-height: 1;
+  }
+  .icon_second {
+      position: absolute;
+      transform: translateX(-150%);
+  }
+}
+.icon_main {
+  &:hover{
+    .icon_box .icon_first {
+      transform: translateX(150%);
+    }
+    .icon_box .icon_second {
+      transform: translateX(0%);
+    }
+  }
+}

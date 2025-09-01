@@ -1,0 +1,77 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Header CSS
+----------------------------------------*/
+
+.tj-header {
+	&-menu {
+		& ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			column-gap: 45px;
+			@media #{$lg} {
+				column-gap: 28px;
+			}
+			& > li {
+				& > a {
+					display: flex;
+					align-items: center;
+					gap: 8px;
+					color: rgba(255, 255, 255, 0.5);
+					font-weight: var(--tj-fw-sbold);
+					font-size: 15px;
+					text-decoration: none;
+					padding: 40px 0px 36px;
+					transition: 0.5s;
+					position: relative;
+					@media #{$lg} {
+						font-size: 14px;
+						font-weight: var(--tj-fw-medium);
+					}
+					&::before {
+						content: "";
+						position: absolute;
+						width: 0;
+						height: 3px;
+						bottom: -1px;
+						left: 0;
+						background: var(--tj-color-theme-primary);
+						opacity: 0;
+						visibility: hidden;
+						transition: 0.5s;
+					}
+				}
+				&.current,
+				&.current-menu-ancestor {
+					> a {
+						color: var(--tj-color-common-white);
+						&::before {
+							width: 100%;
+							left: 0;
+							opacity: 1;
+							visibility: visible;
+						}
+					}
+				}
+				&:hover {
+					> a {
+						color: var(--tj-color-common-white);
+						&::before {
+							width: 100%;
+							left: 0;
+							opacity: 1;
+							visibility: visible;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* !END: Theme Header CSS */

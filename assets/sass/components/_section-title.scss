@@ -1,0 +1,43 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme section  CSS
+----------------------------------------*/
+
+.tj-section {
+	&-wrapper {
+		margin-bottom: 60px;
+		.tj-section-title {
+			margin-bottom: 0;
+		}
+		@media #{$lg} {
+			.tj-section-title {
+				font-size: 40px;
+			}
+		}
+		@media #{$md, $sm} {
+			margin-bottom: 40px;
+			.tj-section-title {
+				font-size: 38px;
+			}
+		}
+		@media #{$xs} {
+			margin-bottom: 40px;
+			.tj-section-subtitle {
+				margin-bottom: 15px;
+			}
+			.tj-section-title {
+				font-size: 32px;
+			}
+		}
+	}
+	&-subtitle {
+		font-size: 14px;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: var(--tj-color-theme-primary);
+		margin-bottom: 20px;
+	}
+}
+
+/* !END: Theme section CSS */

@@ -1,0 +1,67 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Roll CSS
+----------------------------------------*/
+.marquee-area {
+      background: linear-gradient(90deg, var(--tj-color-theme-primary) 0%, #2a1454 100%);
+      padding: 30px 0;
+      position: relative;
+      &::before {
+            position: absolute;
+            content: "";
+            width: 110%;
+            height: 100%;
+            top: 0;
+            left: -10px;
+            background: rgb(192, 172, 233);
+            -webkit-transform: rotate(-1.09deg);
+            -ms-transform: rotate(-1.09deg);
+            transform: rotate(-1.09deg);
+            z-index: -1;   
+      }
+      @media #{$sm, $xs} {
+            padding: 25px 0;
+      }
+}
+.tj-marquee {
+      &-box {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            .tj-marquee-icon {
+                  max-width: 20px;
+                  width: 100%;
+                  img {
+                      width: 100%;
+                      animation: rotateImg2 6s infinite linear;
+                  }
+            }
+      }
+      &-title {
+            & .title {
+                  margin-bottom: 0;
+                  font-size: 20px;
+                  letter-spacing: 0.02em;
+                  text-transform: uppercase;
+            }
+      }
+}
+.tj-marquee-wrapper {
+	max-width: 300px;
+	width: 100%;
+}
+
+
+@keyframes rotateImg2 {
+      0% {
+           transform: rotate(0deg);
+      }
+      100% {
+           transform: rotate(-360deg);
+      }
+ }
+/* !END: Theme Roll CSS */
+
+

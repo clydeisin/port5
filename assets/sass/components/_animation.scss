@@ -1,0 +1,49 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Animation Keyfream CSS
+----------------------------------------*/
+
+
+
+
+@keyframes moving-left {
+      0% {
+    
+        transform: translatey(0px);
+      }
+      20%{
+          transform: translateX(-40px);
+      }
+      50% {
+        transform: translatey(-30px);
+      }
+    
+      100% {
+        transform: translatey(0px);
+      }
+  }
+  
+@keyframes moving-right {
+      0% {
+    
+        transform: translatey(0px);
+      }
+      20%{
+          transform: translateX(40px);
+      }
+      50% {
+        transform: translatey(30px);
+      }
+    
+      100% {
+        transform: translatey(0px);
+      }
+  }
+  
+
+
+
+
+
+/* !END: Theme Animation Keyfream CSS */

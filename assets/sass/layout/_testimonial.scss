@@ -1,0 +1,124 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Testimonial CSS
+----------------------------------------*/
+.tj-testimonial-section {
+	background-color: var(--tj-color-common-black-2);
+	padding-top: 120px;
+
+	.testimonial_wrap {
+		position: relative;
+		z-index: 1;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 300px;
+			background-image: linear-gradient(
+				360deg,
+				#050708 0%,
+				rgba(5, 7, 8, 0) 100%
+			);
+		}
+	}
+	@media #{$md} {
+		padding-top: 100px;
+	}
+	@media #{$sm, $xs} {
+		padding-top: 80px;
+	}
+}
+
+.testimonial-item {
+	background: rgba(20, 12, 28, 1);
+	border: 1px solid rgba(129, 76, 236, 0.22);
+	margin-bottom: 30px;
+	border-radius: 12px;
+	max-width: 420px;
+	width: 100%;
+	padding: 30px;
+	.testimonial-rating {
+		margin-bottom: 25px;
+		.star-ratings {
+			unicode-bidi: bidi-override;
+			color: var(--tj-color-grey-3);
+			font-size: 16px;
+			letter-spacing: 5px;
+			line-height: 1;
+			position: relative;
+			margin: 0;
+			padding: 0;
+			-webkit-text-stroke: 1px var(--tj-color-grey-3);
+			.fill-ratings {
+				color: var(--tj-grey-1);
+				padding: 0;
+				position: absolute;
+				z-index: 1;
+				display: block;
+				top: 0;
+				left: 0;
+				overflow: hidden;
+
+				span {
+					display: inline-block;
+				}
+			}
+			.empty-ratings {
+				padding: 0;
+				display: block;
+				z-index: 0;
+				color: var(--tj-color-grey-3);
+			}
+		}
+	}
+	.desc {
+		color: rgba(255, 255, 255, 0.6);
+		font-size: 18px;
+		margin-bottom: 30px;
+		p {
+			margin-bottom: 0;
+		}
+	}
+	.testimonial-auother {
+		display: flex;
+		gap: 15px;
+		align-items: center;
+		border-top: 1px solid rgba(129, 76, 236, 0.22);
+		padding-top: 30px;
+		.author-images {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 60px;
+			height: 60px;
+			line-height: 1;
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			border-radius: 50%;
+		}
+		.auother-name {
+			.title {
+				font-size: 18px;
+				font-weight: var(--tj-fw-sbold);
+				letter-spacing: -0.02em;
+				margin-bottom: 0;
+			}
+		}
+	}
+	@media #{$lg, $md} {
+		padding: 30px 15px;
+	}
+	@media #{$sm, $xs} {
+		padding: 30px 15px;
+		margin-left: auto;
+		margin-right: auto;
+		.desc {
+			font-size: 16px;
+			margin-bottom: 30px;
+		}
+	}
+}
+/* !END: Theme Testimonial CSS */
